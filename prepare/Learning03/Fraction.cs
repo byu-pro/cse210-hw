@@ -1,41 +1,57 @@
-// Fraction class
-public class Fraction {
-    private int numerator;   // attribute for the numerator
-    private int denominator; // attribute for the denominator
-    
-    // Constructor with numerator and denominator
-    public Fraction(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
-    }
-    
-    // Getter for numerator
-    public int getNumerator() {
-        return numerator;
-    }
-    
-    // Setter for numerator
-    public void setNumerator(int numerator) {
-        this.numerator = numerator;
-    }
-    
-    // Getter for denominator
-    public int getDenominator() {
-        return denominator;
-    }
-    
-    // Setter for denominator
-    public void setDenominator(int denominator) {
-        this.denominator = denominator;
-    }
-    
-    // Method to return fractional representation
-    public String getFractionalRepresentation() {
-        return numerator + "/" + denominator;
-    }
-    
-    // Method to return decimal representation
-    public double getDecimalRepresentation() {
-        return (double) numerator / denominator;
+using System;
+
+namespace Learning03
+{
+    public class Fraction
+    {
+        private int top;
+        private int bottom;
+
+        // Constructor with no parameters
+        public Fraction()
+        {
+            top = 1;
+            bottom = 1;
+        }
+
+        // Constructor with one parameter for the top
+        public Fraction(int top)
+        {
+            this.top = top;
+            bottom = 1;
+        }
+
+        // Constructor with two parameters for the top and bottom
+        public Fraction(int top, int bottom)
+        {
+            this.top = top;
+            this.bottom = bottom;
+        }
+
+        // Getter and setter for the top value
+        public int Top
+        {
+            get { return top; }
+            set { top = value; }
+        }
+
+        // Getter and setter for the bottom value
+        public int Bottom
+        {
+            get { return bottom; }
+            set { bottom = value; }
+        }
+
+        // Method to return the fraction as a string
+        public string GetFractionString()
+        {
+            return top + "/" + bottom;
+        }
+
+        // Method to return the decimal value of the fraction
+        public double GetDecimalValue()
+        {
+            return (double)top / bottom;
+        }
     }
 }
