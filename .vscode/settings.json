@@ -1,3 +1,4 @@
 {
-    "r.alwaysUseActiveTerminal": true
+    "r.alwaysUseActiveTerminal": true,
+    "r.lsp.promptToInstall": false
 }
