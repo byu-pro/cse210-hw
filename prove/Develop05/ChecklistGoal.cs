@@ -1,9 +1,22 @@
 // ChecklistGoal class represents a checklist goal that must be accomplished a certain number of times to be complete
 public class ChecklistGoal : Goal
 {
+    // Private member variables
+    private int _requiredTimes;
+    private int _completedTimes;
+
     // Properties
-    public int RequiredTimes { get; set; }
-    public int CompletedTimes { get; private set; }
+    public int RequiredTimes
+    {
+        get { return _requiredTimes; }
+        set { _requiredTimes = value; }
+    }
+
+    public int CompletedTimes
+    {
+        get { return _completedTimes; }
+        private set { _completedTimes = value; }
+    }
 
     // Constructor
     public ChecklistGoal(string name, int value, int requiredTimes)

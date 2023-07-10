@@ -13,4 +13,10 @@ public class EternalGoal : Goal
     {
         return Value;
     }
+
+    // Override MarkCompleted method to prevent marking eternal goals as completed
+    public override void MarkCompleted()
+    {
+        // Do nothing
+    }
 }
