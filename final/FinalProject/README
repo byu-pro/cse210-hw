@@ -1,0 +1,57 @@
+# Task Management System
+
+This is a simple task management system implemented in C#. It allows users to create tasks, set priorities, assign deadlines, and view task details. The system also supports saving and loading tasks to/from a file for persistent storage.
+
+## How to Use
+
+1. Clone the repository or download the source code.
+
+2. Open the project in your C# development environment (e.g., Visual Studio Code, Visual Studio).
+
+3. Build the project to ensure all dependencies are resolved.
+
+4. Run the program by executing the `Program.cs` file.
+
+5. Use the displayed menu to interact with the task management system. Follow the on-screen prompts to perform different actions:
+
+   - Option 1: Create a new task
+   - Option 2: Assign priority to a task
+   - Option 3: Set a deadline for a task
+   - Option 4: View task details
+   - Option 5: Save tasks to a file
+   - Option 6: Load tasks from a file
+   - Option 0: Exit the program
+
+6. **Creating a New Task:**
+   When selecting option 1, you will be prompted to enter the task details, including Task ID, Task Name, Description, Deadline (in `yyyy-mm-dd` format), Priority (1-5), and Status. After providing the information, the program will create the task and display a success message.
+
+7. **Assigning Priority to a Task:**
+   Select option 2 to assign a new priority to an existing task. You will be prompted to enter the Task ID for which you want to assign a new priority and the new priority value (1-5). The program will update the task's priority and display a success message.
+
+8. **Setting a Deadline for a Task:**
+   Select option 3 to set a new deadline for an existing task. You will be prompted to enter the Task ID for which you want to set a new deadline and the new deadline in `yyyy-mm-dd` format. The program will update the task's deadline and display a success message.
+
+9. **Viewing Task Details:**
+   Select option 4 to view the detailed information about an existing task. You will be prompted to enter the Task ID, and the program will display the task's details, including Task ID, Task Name, Description, Deadline, Priority, and Status.
+
+10. **Saving and Loading Tasks to/from File:**
+    Select option 5 to save all the tasks to a file named `tasks.txt`. Select option 6 to load tasks from the same file. The program will display a success message after saving or loading tasks.
+
+11. **Exiting the Program:**
+    To exit the program, select option 0 from the menu. The program will terminate with a goodbye message.
+
+## Dependencies
+
+The project does not use any external libraries or frameworks. It is built purely in C# and follows object-oriented programming principles.
+
+## File Structure
+
+- `Program.cs`: Contains the main entry point for the program.
+- `Task.cs`: Defines the Task class representing a single task.
+- `Project.cs`: Defines the Project class, which inherits from Task, representing a task with additional project-specific properties.
+- `UserInterface.cs`: Provides methods for user interactions and displays a menu for task management.
+- `TaskManager.cs`: Manages tasks, provides methods for adding, removing, and retrieving tasks.
+- `TaskList.cs`: Implements a list of tasks.
+- `FileHandler.cs`: Handles saving and loading tasks to/from a file.
+- `User.cs`: Represents a user with user-specific properties and methods.
+- `NotificationManager.cs`: Provides methods for sending notifications.
